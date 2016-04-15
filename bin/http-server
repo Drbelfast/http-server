@@ -1,13 +1,15 @@
 #!/usr/bin/env node
+// using node interpreter
 
 'use strict';
 
 var colors     = require('colors'),
-    os         = require('os'),
-    httpServer = require('../lib/http-server'),
-    portfinder = require('portfinder'),
-    opener     = require('opener'),
-    argv       = require('optimist')
+    // "colors" packages used for coloring command-line
+    os         = require('os'), // internal package reference
+    httpServer = require('../lib/http-server'), // using httpServer
+    portfinder = require('portfinder'), // a tool to find open port on current machine
+    opener     = require('opener'),  // open stuff like webpages, files cross-platform
+    argv       = require('optimist') // DEPRECATED!!!  yargs is the successor. used for interpreting command line options
       .boolean('cors')
       .argv;
 
